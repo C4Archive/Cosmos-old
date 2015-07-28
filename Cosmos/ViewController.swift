@@ -91,4 +91,8 @@ class WorkSpace: C4CanvasController {
         //add it to the canvas
         infiniteScrollView.add(ts)
     }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
