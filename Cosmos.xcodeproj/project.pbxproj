@@ -12,6 +12,9 @@
 		1FABE7BC1B672D4D00F3A945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FABE7BA1B672D4D00F3A945 /* Main.storyboard */; };
 		1FABE7BE1B672D4D00F3A945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FABE7BD1B672D4D00F3A945 /* Assets.xcassets */; };
 		1FABE7C11B672D4D00F3A945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FABE7BF1B672D4D00F3A945 /* LaunchScreen.storyboard */; };
+		1FABE7D61B672E7D00F3A945 /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FABE7D51B672E7D00F3A945 /* InfiniteScrollView.swift */; };
+		1FABE7D71B672EE700F3A945 /* C4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FABE7D01B672D7200F3A945 /* C4.framework */; };
+		1FABE7D81B672EE700F3A945 /* C4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FABE7D01B672D7200F3A945 /* C4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,28 @@
 			remoteGlobalIDString = A96F505A1B5385A5002B3A46;
 			remoteInfo = C4App;
 		};
+		1FABE7D91B672EE700F3A945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FABE7C91B672D7200F3A945 /* C4iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 614F824219DB5ED3001DF1D4;
+			remoteInfo = C4;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FABE7DB1B672EE700F3A945 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1FABE7D81B672EE700F3A945 /* C4.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1FABE7B31B672D4D00F3A945 /* Cosmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cosmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +71,7 @@
 		1FABE7C01B672D4D00F3A945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FABE7C21B672D4D00F3A945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FABE7C91B672D7200F3A945 /* C4iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = C4iOS.xcodeproj; path = ../../C4iOS/C4iOS.xcodeproj; sourceTree = "<group>"; };
+		1FABE7D51B672E7D00F3A945 /* InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FABE7D71B672EE700F3A945 /* C4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +107,7 @@
 			children = (
 				1FABE7B61B672D4D00F3A945 /* AppDelegate.swift */,
 				1FABE7B81B672D4D00F3A945 /* ViewController.swift */,
+				1FABE7D51B672E7D00F3A945 /* InfiniteScrollView.swift */,
 				1FABE7BA1B672D4D00F3A945 /* Main.storyboard */,
 				1FABE7BD1B672D4D00F3A945 /* Assets.xcassets */,
 				1FABE7BF1B672D4D00F3A945 /* LaunchScreen.storyboard */,
@@ -110,10 +137,12 @@
 				1FABE7AF1B672D4D00F3A945 /* Sources */,
 				1FABE7B01B672D4D00F3A945 /* Frameworks */,
 				1FABE7B11B672D4D00F3A945 /* Resources */,
+				1FABE7DB1B672EE700F3A945 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1FABE7DA1B672EE700F3A945 /* PBXTargetDependency */,
 			);
 			name = Cosmos;
 			productName = Cosmos;
@@ -200,12 +229,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FABE7D61B672E7D00F3A945 /* InfiniteScrollView.swift in Sources */,
 				1FABE7B91B672D4D00F3A945 /* ViewController.swift in Sources */,
 				1FABE7B71B672D4D00F3A945 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FABE7DA1B672EE700F3A945 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = C4;
+			targetProxy = 1FABE7D91B672EE700F3A945 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1FABE7BA1B672D4D00F3A945 /* Main.storyboard */ = {
@@ -312,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Cosmos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C4.Cosmos;
@@ -323,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Cosmos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C4.Cosmos;
